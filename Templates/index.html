@@ -84,8 +84,9 @@
                 tabcontent.classList.remove("active-tab");
             }
             // Add the active class to the selected tab link and its content
-            document.getElementById(tabName + "-link").classList.add("active-link");
+            event.currentTarget.classList.add("active-link")
             document.getElementById(tabName).classList.add("active-tab");
+
         }
     </script>
        
