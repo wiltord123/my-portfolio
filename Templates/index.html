@@ -36,7 +36,7 @@
                     <img src="../assets/images/willy2.png" alt="">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
+                    <h1 class="sub-title">About Me</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus voluptate ea labore illum odit minima, voluptas autem ratione suscipit blanditiis aliquam consequatur? Quam ab, excepturi corporis ipsam consequuntur laboriosam molestias.</p>
                     <div class="tab-title">
                         <P class="tab-links active-link"onclick="opentab('Skills')">Skils</P>
@@ -69,6 +69,27 @@
             </div>
         </div>
     </div>
-    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabName) {
+            // Remove the active class from all tab links
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            // Remove the active class from all tab contents
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            // Add the active class to the selected tab link and its content
+            document.getElementById(tabName + "-link").classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+       
+
+
 </body>
 </html>
